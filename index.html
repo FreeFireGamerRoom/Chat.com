@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" w-tid="1">
+<head w-tid="3">
+  
+<title>Minimal Multiplayer Chat</title>
+<meta property="og:title" content="Minimal Multiplayer Chat"/>
+<meta property="og:url" content="https://freefirechatroom--granxy.on.websim.com?v=49"/>
+<meta property="og:type" content="website"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="og:image" content="https://images.websim.com/v1/project/siui0lh5hxlj_5o5nuv_/revision/49/1200.jpeg"/>
+<meta property="twitter:image" content="https://images.websim.com/v1/project/siui0lh5hxlj_5o5nuv_/revision/49/1200.jpeg"/>
+<link  rel="canonical" href="https://websim.com/@granxy/freefirechatroom">
+<link rel="stylesheet" href="https://api.websim.com/fonts.css?v=2619750b615fe3fe8a00a383db154c24d3bc34c5">
+<style class="websim-injected websim-ios-mobile-fix">
+/* iOS zoom prevention and overscroll behavior - injected by WebSim */
+html, body {
+  touch-action: pan-x pan-y;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+}
+input, textarea, select {
+  font-size: max(1rem, 16px) !important;
+}
+</style>
+<script class="websim-injected">__WEBSIM_DATA__={"home":false,"hostOrigin":"https://websim.com","apiOrigin":"https://api.websim.com","isTopLevelFrame":true,"project_id":"siui0lh5hxlj_5o5nuv_","project_version":49,"route":{"type":"slug","username":"granxy","slug":"freefirechatroom"},"baseUrl":"https://freefirechatroom--granxy.on.websim.com"}</script>
+<script class="websim-injected" src="https://api.websim.com/dist/index.js?v=2619750b615fe3fe8a00a383db154c24d3bc34c5"></script>
+<meta charset="utf-8" w-tid="5"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" w-tid="7"/>
+  <!--title>Free Fire pairs</title-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin w-tid="11"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" w-tid="13"/>
+  <link rel="stylesheet" href="styles.css" w-tid="15"/>
+  <script type="importmap" w-tid="17">{
+  "imports": {
+    "nanoid": "https://cdn.jsdelivr.net/npm/nanoid@4.0.0/index.browser.js"
+  }
+}</script>
+</head>
+<body w-tid="19">
+  <main class="container" w-tid="21">
+    <header class="topbar" w-tid="23">
+      <div class="title" w-tid="25">Free Fire pairs</div>
+      <div class="meta" w-tid="27">
+        <span id="userBadge" class="badge" aria-label="You" w-tid="29"></span>
+        <button id="togglePeers" class="small" w-tid="31">Active users</button>
+      </div>
+    </header>
+
+    <section class="content" w-tid="33">
+      <aside id="peersPanel" class="peers" aria-hidden="true" w-tid="35">
+        <h4 w-tid="37">Active users</h4>
+        <ul id="peersList" class="peersList" w-tid="39"></ul>
+      </aside>
+
+      <section class="chatArea" w-tid="41">
+        <div id="messages" class="messages" role="log" aria-live="polite" w-tid="43"></div>
+        <form id="composer" class="composer" autocomplete="off" w-tid="45">
+          <input id="messageInput" class="input" type="text" placeholder="Write a message…" maxlength="1000" w-tid="47"/>
+          <button id="sendBtn" class="send" type="submit" aria-label="Send" w-tid="49">Send</button>
+        </form>
+      </section>
+    </section>
+
+    <footer class="footer" w-tid="51">
+      <div id="botInfo" class="botInfo" aria-live="polite" w-tid="53"></div>
+    </footer>
+  </main>
+
+  <!-- emoji picker root injected by JS when needed -->
+  <div id="messageOptionsRoot" w-tid="55"></div>
+
+  <!-- Onboarding: welcome -> username -> greeting -->
+  <div id="onboardRoot" class="onboardRoot" aria-hidden="false" w-tid="57">
+    <div id="welcomeScreen" class="onboardScreen welcomeScreen" w-tid="59">
+      <h1 class="onboardTitle" w-tid="61">welcome to Free Fire Pairing Group chat</h1>
+      <button id="getStartedBtn" class="onboardLargeBtn" w-tid="63">Get started</button>
+    </div>
+
+    <div id="loadingSplash" class="onboardScreen loadingSplash hidden" aria-hidden="true" w-tid="65">
+      <div class="spinner" aria-hidden="true" w-tid="67"></div>
+    </div>
+
+    <div id="usernameScreen" class="onboardScreen usernameScreen hidden" aria-hidden="true" w-tid="69">
+      <h1 class="onboardTitle" w-tid="71">choose a username</h1>
+      <div class="usernameArea" w-tid="73">
+        <input id="usernameLine" class="usernameLine" type="text" placeholder="tap to enter username" maxlength="30" w-tid="75"/>
+        <button id="checkInBtn" class="onboardLargeBtn hidden" w-tid="77">Check in</button>
+        <div id="usernameStatus" class="usernameStatus" aria-live="polite" w-tid="79"></div>
+      </div>
+    </div>
+
+    <div id="greetScreen" class="onboardScreen greetScreen hidden" aria-hidden="true" w-tid="81">
+      <div id="greetText" class="greetText" w-tid="83"></div>
+      <div class="greetHint" w-tid="85">Double click on the background to skip this message.</div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js" w-tid="87"></script>
+</body>
+</html>
